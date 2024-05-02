@@ -1,5 +1,9 @@
+import ContactsApp from "./components/ContactsApp/ContactsApp";
+
 function App() {
-  return <></>;
+  return <>
+  <ContactsApp/>
+  </>;
 }
 
 export default App;
