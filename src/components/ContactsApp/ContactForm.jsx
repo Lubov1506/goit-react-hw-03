@@ -16,7 +16,7 @@ const FeedbackSchema = Yup.object().shape({
     .required("Please, type a number"),
 });
 
-const ContactsForm = ({ onAdd }) => {
+const ContactForm = ({ onAdd }) => {
   const initValue = {
     name: "",
     number: "",
@@ -50,4 +50,4 @@ const ContactsForm = ({ onAdd }) => {
   );
 };
 
-export default ContactsForm;
+export default ContactForm;

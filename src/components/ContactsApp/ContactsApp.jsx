@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import s from "./ContactsApp.module.css";
-import ContactsForm from "./ContactsForm";
-import ContactsList from "./ContactsList";
+import ContactForm from "./ContactForm";
+import ContactList from "./ContactList";
 import SearchBox from "./SearchBox";
 import contactsData from "../../assets/contacts";
 import { nanoid } from "nanoid";
@@ -43,9 +43,9 @@ const ContactsApp = () => {
   return (
     <div className={s.container}>
       <h1>Phonebook</h1>
-      <ContactsForm onAdd={handleAddContact} />
+      <ContactForm onAdd={handleAddContact} />
       <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-      <ContactsList contacts={filteredContacts} handleDelete={handleDelete} />
+      <ContactList contacts={filteredContacts} handleDelete={handleDelete} />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { FaUser } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import Button from "../Button/Button";
 import s from "./ContactsApp.module.css";
-const ContactCard = ({ item: { name, number, id }, handleDelete }) => {
+const Contact = ({ item: { name, number, id }, handleDelete }) => {
   return (
     <li className={s.card}>
       <div>
@@ -20,4 +20,4 @@ const ContactCard = ({ item: { name, number, id }, handleDelete }) => {
   );
 };
 
-export default ContactCard;
+export default Contact;
