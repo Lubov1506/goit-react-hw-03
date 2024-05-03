@@ -6,7 +6,7 @@ const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
     .matches(
       /^[a-zA-Zа-яА-ЯїЇіІєЄёЁґҐ\s']+$/,
-      "Name can only contain letters of Ukrainian and English alphabet, spaces, and apostrophes"
+      "Name can only contain letters"
     )
     .min(3, "Too short!")
     .max(50, "Too long!")
