@@ -8,6 +8,7 @@ import ContactList from "./components/ContactsApp/ContactList";
 import contactsData from "./assets/contacts";
 
 function App() {
+
   const [contacts, setContacts] = useState(
     () =>
       JSON.parse(window.localStorage.getItem("saved-contacts")) || contactsData

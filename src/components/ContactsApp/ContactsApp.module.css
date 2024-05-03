@@ -12,8 +12,7 @@
 .form {
   border: 1px solid grey;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
+  composes: col;
   width: 300px;
   gap: 20px;
   padding: 20px;
