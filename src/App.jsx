@@ -7,16 +7,12 @@ import SearchBox from "./components/ContactsApp/SearchBox";
 import ContactList from "./components/ContactsApp/ContactList";
 import contactsData from "./assets/contacts";
 
-
 function App() {
   const [contacts, setContacts] = useState(
     () =>
       JSON.parse(window.localStorage.getItem("saved-contacts")) || contactsData
   );
-
-  const [searchValue, setSearchValue] = useState(
-    () => JSON.parse(window.localStorage.getItem("search-query")) || ""
-  );
+  const [searchValue, setSearchValue] = useState("");
 
   const handleDelete = (id) => {
     setContacts((prev) => prev.filter((item) => item.id !== id));
@@ -36,9 +32,6 @@ function App() {
   useEffect(() => {
     window.localStorage.setItem("saved-contacts", JSON.stringify(contacts));
   }, [contacts]);
-  useEffect(() => {
-    window.localStorage.setItem("search-query", JSON.stringify(searchValue));
-  }, [searchValue]);
 
   const filteredContacts = getSearchContacts();
   return (
