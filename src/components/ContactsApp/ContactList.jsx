@@ -1,13 +1,13 @@
-import ContactCard from "./ContactCard";
+import Contact from "./Contact";
 import s from "./ContactsApp.module.css";
 
-const ContactsList = ({ contacts, handleDelete }) => {
+const ContactList = ({ contacts, handleDelete }) => {
   return (
     <div>
       <ul className={s.list}>
         {contacts.map((item) => {
           return (
-            <ContactCard
+            <Contact
               key={item.id}
               item={item}
               handleDelete={handleDelete}
@@ -19,4 +19,4 @@ const ContactsList = ({ contacts, handleDelete }) => {
   );
 };
 
-export default ContactsList;
+export default ContactList;
